@@ -4,6 +4,7 @@ import { describe, expect, test } from "vitest";
 import About from "../pages/About";
 import Home from "../pages/Home";
 import Ourwork from "../pages/Ourwork";
+import { Page } from '../../../node_modules/csstype/index.d';
 
 // helper function to wrap the comment in a router for testing Link
 const renderWithRouter = (component) => {
@@ -105,3 +106,10 @@ describe("About Us Counter State Testing", () => {
     expect(countElement).toHaveTextContent(-1);
   })
 });
+
+// Testing image from Home Page
+test('render the image from the Home page,"img"',()=>{
+  renderWithRouter(<Home/>);
+  const img = screen.getByRole("img",{name:/hero-image/i})
+  expect(img).toBeInTheDocument()
+})

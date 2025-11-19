@@ -18,6 +18,10 @@ const navs = [
     title:'Contact',
     path:'/contact',
   },
+  {
+    title:'Myself',
+    path:'/myself',
+  },
 ];
 const Navbar = () => {
   const [activeIndex, setActiveIndex] = useState(0)
