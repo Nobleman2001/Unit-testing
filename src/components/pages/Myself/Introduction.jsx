@@ -1,16 +1,25 @@
-import Myself from "./Myself"
+import Myself from './Myself';
+/** 
+ * @typedef {object} aboutMe ,  
+ * @property {string} name,
+ * @property {string} designation
+ */
 
 const aboutMe ={
   name:'Jesmin Chakma',
-  
-}
-// this is just checking the github  push  this is conflicting
+  designation:'Frontend Developer',
+
+};
+
+/**
+ * @return {JSX.Element} 
+ */
 const Introduction = () => {
   return (
     <div>
       <Myself aboutMe={aboutMe}/>
     </div>
-  )
-}
+  );
+};
 
-export default Introduction
+export default Introduction;

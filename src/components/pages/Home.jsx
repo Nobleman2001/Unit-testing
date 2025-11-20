@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import Container from "../hooks/Container";
+import { Link } from 'react-router-dom';
+import Container from '../hooks/Container';
 
 const Home = () => {
   return (

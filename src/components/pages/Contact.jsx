@@ -1,15 +1,21 @@
-import { CheckCircle, Mail, MapPin, Phone, Send } from "lucide-react";
-import { useState } from "react";
+import { CheckCircle, Mail, MapPin, Phone, Send } from 'lucide-react';
+import { useState } from 'react';
 
 export default function ContactPage() {
+  /**
+   * @type {{ name: string, email: string, subject: string, message: string }}
+   */
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
   });
   const [submitted, setSubmitted] = useState(false);
 
+  /**
+   * @param {React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>} e
+   */
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -17,12 +23,15 @@ export default function ContactPage() {
     });
   };
 
+  /**
+   * @param {React.FormEvent} e
+   */
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
-      setFormData({ name: "", email: "", subject: "", message: "" });
+      setFormData({ name: '', email: '', subject: '', message: '' });
     }, 3000);
   };
 
