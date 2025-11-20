@@ -4,7 +4,7 @@ const aboutMe ={
   name:'Jesmin Chakma',
   
 }
-// this is just checking the github  push  this is confliting
+// this is just checking the github  push  this is 
 const Introduction = () => {
   return (
     <div>
